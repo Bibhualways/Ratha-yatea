@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+    <meta charset="UTF-8">
+    <title>ସ୍ନାନ ପୂର୍ଣ୍ଣିମା ଶୁଭେଚ୍ଛା</title>
+    <style>
+        body {
+            font-family: 'Noto Sans Oriya', 'Lohit Oriya', 'Segoe UI', Arial, sans-serif;
+            background: #f7fafc;
+            text-align: center;
+            padding: 40px;
+        }
+        .wish-box {
+            background: #fff8e1;
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            display: inline-block;
+            padding: 30px 40px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1.1em;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 220px;
+        }
+        button {
+            padding: 10px 22px;
+            font-size: 1em;
+            border-radius: 6px;
+            border: none;
+            background: #ffd700;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .message {
+            margin-top: 30px;
+            font-size: 1.3em;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .jagannath {
+            font-size: 2.5em;
+            color: #d84315;
+        }
+        .images {
+            margin: 20px 0 10px 0;
+        }
+        .images img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #ffd700;
+            margin: 0 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        audio {
+            margin-top: 20px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wish-box">
+        <div class="jagannath">🙏 ଜୟ ଜଗନ୍ନାଥ 🙏</div>
+        <div class="images">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Lord_Jagannath_Puri.jpg" alt="Jagannath 1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Jagannath_balabhadra_subhadra.jpg" alt="Jagannath 2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Jagannath_Temple_Puri_2017.jpg" alt="Jagannath 3">
+        </div>
+        <h2>ସ୍ନାନ ପୂର୍ଣ୍ଣିମା ଶୁଭେଚ୍ଛା ଉପହାର</h2>
+        <p>ନାମ ଲେଖନ୍ତୁ ଏବଂ ବ୍ୟକ୍ତିଗତ ଶୁଭେଚ୍ଛା ପାଇଁ ବଟନ୍ କ୍ଲିକ୍ କରନ୍ତୁ:</p>
+        <input type="text" id="nameInput" placeholder="ନାମ ଲେଖନ୍ତୁ">
+        <button onclick="generateWish()">ଶୁଭେଚ୍ଛା ଦିଅନ୍ତୁ</button>
+        <div class="message" id="wishMessage"></div>
+        <audio controls>
+            <source src="https://www.pagalworld.com.se/files/download/id/64647" type="audio/mpeg">
+            ଆପଣଙ୍କ ବ୍ରାଉଜର ଏହି ଭଜନ ଚଳାଇପାରିବ ନାହିଁ।
+        </audio>
+        <div style="margin-top:10px; font-size:1em; color:#d84315;">
+            ଭଜନ: ଜୟ ଜଗନ୍ନାଥ ସ୍ୱାମୀ
+        </div>
+    </div>
+
+    <script>
+        function generateWish() {
+            var name = document.getElementById('nameInput').value.trim();
+            var messageDiv = document.getElementById('wishMessage');
+            if (name === "") {
+                messageDiv.innerHTML = "ଦୟାକରି ନାମ ଲେଖନ୍ତୁ!";
+                return;
+            }
+            messageDiv.innerHTML = 
+                "ପ୍ରିୟ <b>" + name + "</b>,<br>" +
+                "ଶ୍ରୀ ଜଗନ୍ନାଥଙ୍କର ଦିବ୍ୟ କୃପା ଏହି ପବିତ୍ର ସ୍ନାନ ପୂର୍ଣ୍ଣିମାରେ ଆପଣ ଓ ଆପଣଙ୍କ ପରିବାର ଉପରେ ସଦା ବର୍ଷୁ।<br>" +
+                "ଆପଣଙ୍କ ଜୀବନ ସୁଖ, ସମୃଦ୍ଧି ଓ ସ୍ୱାସ୍ଥ୍ୟରେ ପୂର୍ଣ୍ଣ ହୋଉ।<br><br>" +
+                "<span class='jagannath'>ଜୟ ଜଗନ୍ନାଥ!</span>";
+        }
+    </script>
+</body>
+</html>
